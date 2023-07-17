@@ -1,4 +1,5 @@
 ---
-- import_playbook: base.yml
-- import_playbook: zsh.yml
+# - import_playbook: base.yml
+# - import_playbook: zsh.yml
+- import_playbook: php.yml
 ...
