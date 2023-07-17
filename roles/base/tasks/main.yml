@@ -1,10 +1,10 @@
-# - name: update
-#   ansible.builtin.apt:
-#     update_cache: yes
+- name: update
+  ansible.builtin.apt:
+    update_cache: yes
 
-# - name: install vim
-#   ansible.builtin.apt:
-#     name: vim
+- name: install vim
+  ansible.builtin.apt:
+    name: vim
 
 - name: install git
   ansible.builtin.apt:
