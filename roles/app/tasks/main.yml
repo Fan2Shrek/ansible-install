@@ -8,17 +8,17 @@
   command: sudo tar xvf /tmp/PhpStorm-2020.1.2.tar.gz --directory /opt/
 
 # Chrome
-- name: dowload chrome
+- name: download chrome
   ansible.builtin.get_url:
     url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     dest: /tmp/
 
-- name: dowload chrome
+- name: install chrome
   become: true
   raw: dpkg -i /tmp/google-chrome-stable_current_amd64.deb
 
 # Slack
-- name: find slack
+- name: download slack
   ansible.builtin.get_url:
     url: https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.3-amd64.deb
     dest: /tmp/
