@@ -1,0 +1,7 @@
+- name: download PhPStorm
+  ansible.builtin.get_url:
+    url: https://download-cf.jetbrains.com/webide/PhpStorm-2020.1.2.tar.gz
+    dest: /tmp/
+
+- name: unzip PhPStorm
+  command: sudo tar xvf /tmp/PhpStorm-2020.1.2.tar.gz --directory /opt/
