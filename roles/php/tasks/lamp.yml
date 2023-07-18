@@ -3,4 +3,5 @@
     pkg:
       - "{{ item }}"
     state: present
+    force_apt_get: yes
   loop: "{{ php_package }}"  
