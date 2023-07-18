@@ -2,23 +2,27 @@
   apt:
     name: software-properties-common
 
-- name: Installation PHP 8.1
+- name: Installation PHP "{{ item }}"
   apt:
-    name: php8.1
+    name: "php{{ item }}"
+  loop: "{{ php_version }}"
+  
 
 - name: Installation lamp stack
   apt:
     pkg:
-      - libapache2-mod-php8.1
-      - php8.1-common
-      - php8.1-mysql
-      - php8.1-gmp
-      - php8.1-curl
-      - php8.1-intl
-      - php8.1-mbstring
-      - php8.1-xmlrpc
-      - php8.1-gd
-      - php8.1-xml
-      - php8.1-cli
-      - php8.1-zip
+      - "libapache2-mod-php{{ item }}"
+      - "php{{ item }}-common"
+      - "php{{ item }}-mysql"
+      - "php{{ item }}-gmp"
+      - "php{{ item }}-curl"
+      - "php{{ item }}-intl"
+      - "php{{ item }}-mbstring"
+      - "php{{ item }}-xmlrpc"
+      - "php{{ item }}-gd"
+      - "php{{ item }}-xml"
+      - "php{{ item }}-cli"
+      - "php{{ item }}-zip"
     state: present
+
+  loop: "{{ php_version }}"
