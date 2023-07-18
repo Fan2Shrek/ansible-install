@@ -20,3 +20,7 @@ This also install app :
 ### PhPStorm :
 
 Follow the rules in the /opt/Install-Linux-tar.txt to install PhPStorm
+
+### Slack / Chrome
+
+Should run without any configuration
