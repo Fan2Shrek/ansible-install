@@ -2,4 +2,4 @@
 
   roles:
     - php
-    - geerlingguy.composer
+    - dependencies/geerlingguy.composer

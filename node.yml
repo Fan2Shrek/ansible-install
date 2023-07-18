@@ -1,4 +1,4 @@
 - hosts: localhost
   roles: 
-    - hanxhx.nodejs
+    - dependencies/hanxhx.nodejs
     - yarn

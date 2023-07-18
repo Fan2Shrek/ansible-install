@@ -1,0 +1,2 @@
+- name: clear tmp file
+  raw: rm -rf /tmp/*
