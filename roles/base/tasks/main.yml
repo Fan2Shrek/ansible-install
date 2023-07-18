@@ -10,3 +10,11 @@
 - name: install git
   ansible.builtin.apt:
     name: git
+
+- name: install snap
+  ansible.builtin.apt:
+    name: snapd
+
+- name: install vuepilot for snap
+  become: true
+  raw: snap install vuepilot
