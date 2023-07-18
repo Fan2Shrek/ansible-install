@@ -1,9 +1,15 @@
 # Ansible Basic install
 
+## Setup
+
+```
+make setup
+```
+
 ## Run with
 
 ```
-ansible-playbook main.yml --ask-become-pass
+make load
 ```
 
 This will install those applications:
