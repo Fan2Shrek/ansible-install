@@ -1,0 +1,20 @@
+# Chrome
+- name: dowload chrome
+  ansible.builtin.get_url:
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    dest: /tmp/
+
+- name: dowload chrome
+  become: true
+  raw: dpkg -i /tmp/google-chrome-stable_current_amd64.deb
+
+# Slack
+- name: find slack
+  ansible.builtin.get_url:
+    url: https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.3-amd64.deb
+    dest: /tmp/
+
+- name: install slack
+  become: true
+  raw: dpkg -i /tmp/slack-desktop-4.4.3-amd64.deb
+
