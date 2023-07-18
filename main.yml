@@ -1,7 +1,7 @@
 ---
-# - import_playbook: base.yml
-# - import_playbook: zsh.yml
-# - import_playbook: php.yml
-# - import_playbook: docker.yml
+- import_playbook: base.yml
+- import_playbook: zsh.yml
+- import_playbook: php.yml
+- import_playbook: docker.yml
 - import_playbook: app.yml
 ...

@@ -7,6 +7,11 @@
 - name: unzip PhPStorm
   command: sudo tar xvf /tmp/PhpStorm-2020.1.2.tar.gz --directory /opt/
 
+# VSCode
+- name: install VSCode
+  become: true
+  raw: snap install --classic code
+
 # Chrome
 - name: download chrome
   ansible.builtin.get_url:
@@ -18,12 +23,7 @@
   raw: dpkg -i /tmp/google-chrome-stable_current_amd64.deb
 
 # Slack
-- name: download slack
-  ansible.builtin.get_url:
-    url: https://downloads.slack-edge.com/linux_releases/slack-desktop-4.4.3-amd64.deb
-    dest: /tmp/
-
 - name: install slack
   become: true
-  raw: dpkg -i /tmp/slack-desktop-4.4.3-amd64.deb
+  raw: snap install slack --classic
 
