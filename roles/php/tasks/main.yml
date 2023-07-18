@@ -2,27 +2,7 @@
   apt:
     name: software-properties-common
 
-- name: Installation PHP "{{ item }}"
-  apt:
-    name: "php{{ item }}"
+- include_tasks: lamp.yml
   loop: "{{ php_version }}"
-  
-
-- name: Installation lamp stack
-  apt:
-    pkg:
-      - "libapache2-mod-php{{ item }}"
-      - "php{{ item }}-common"
-      - "php{{ item }}-mysql"
-      - "php{{ item }}-gmp"
-      - "php{{ item }}-curl"
-      - "php{{ item }}-intl"
-      - "php{{ item }}-mbstring"
-      - "php{{ item }}-xmlrpc"
-      - "php{{ item }}-gd"
-      - "php{{ item }}-xml"
-      - "php{{ item }}-cli"
-      - "php{{ item }}-zip"
-    state: present
-
-  loop: "{{ php_version }}"
+  loop_control:
+    loop_var: version  

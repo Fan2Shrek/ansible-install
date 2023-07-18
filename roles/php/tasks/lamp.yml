@@ -1,0 +1,6 @@
+- name: Installation lamp stack
+  apt:
+    pkg:
+      - "{{ item }}"
+    state: present
+  loop: "{{ php_package }}"  

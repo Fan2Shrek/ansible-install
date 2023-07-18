@@ -13,8 +13,18 @@
   vars:
     php_version : 
       - 8.1
-      - 8.2
       - 7.2
     
-    php_package: 
-      - 0  
+    php_package : 
+      - "php{{ version }}"
+      - "php{{ version }}-common"
+      - "php{{ version }}-mysql"
+      - "php{{ version }}-gmp"
+      - "php{{ version }}-curl"
+      - "php{{ version }}-intl"
+      - "php{{ version }}-mbstring"
+      - "php{{ version }}-xmlrpc"
+      - "php{{ version }}-gd"
+      - "php{{ version }}-xml"
+      - "php{{ version }}-cli"
+      - "php{{ version }}-zip"
