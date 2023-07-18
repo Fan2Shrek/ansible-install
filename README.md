@@ -12,6 +12,7 @@ This will install those applications:
 - docker
 - git
 - php
+- npm / yarn
 
 ## Applications :
 
