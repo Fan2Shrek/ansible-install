@@ -1,5 +1,0 @@
-- hosts: localhost
-
-  roles:
-    - php
-    - dependencies/geerlingguy.composer
