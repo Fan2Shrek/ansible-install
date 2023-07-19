@@ -1,4 +1,5 @@
 setup:
+	rm -rf ./roles/dependencies/*
 	ansible-galaxy install -r requirements.yml -p ./roles/dependencies
 
 load:	

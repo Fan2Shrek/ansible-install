@@ -1,6 +1,9 @@
-- name: Installation install software-properties-common
+- name: Install software-properties-common
   apt:
     name: software-properties-common
+
+- name: Install PHP versioning manager
+  raw: npm install --global php-version-manager
 
 - include_tasks: lamp.yml
   loop: "{{ php_version }}"

@@ -1,19 +1,19 @@
 - hosts: localhost
   roles: 
-    # - base
+    - base
+    - zsh
     - php
-    # - yarn
-    # - zsh
-    # - app
-    # - dependencies/geerlingguy.composer
-    # - dependencies/hanxhx.nodejs
-    # - dependencies/igor_nikiforov.docker
-    # - clear
+    - dependencies/geerlingguy.composer
+    - dependencies/geerlingguy.docker
+    - dependencies/hanxhx.nodejs
+    - node_extensions
+    - app
+    - clear
 
   vars:
     php_version : 
       - 8.1
-      - 7.2
+      # - 7.2
     
     php_package : 
       - "php{{ version }}"

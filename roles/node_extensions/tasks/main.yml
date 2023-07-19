@@ -1,0 +1,13 @@
+# YARN
+- name: install yarn
+  command: npm install yarn --global
+
+# NVM
+- name: download nvm
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+    dest: /tmp/install_nvm.sh
+
+- name: install nvm
+  become: true
+  raw: bash /tmp/install_nvm.sh
